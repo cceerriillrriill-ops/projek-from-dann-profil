@@ -1,0 +1,324 @@
+/* RESET CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #e9e4ff, #e0f4ff, #fff0e8);
+    color: #625b78;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+.main-header {
+    background: #b8a9e8;
+    color: white;
+    padding: 18px 0;
+    box-shadow: 0 3px 12px rgba(130, 110, 170, 0.15);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 16px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #fff1c9;
+}
+
+/* KONTEN UTAMA */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* FORM SECTION */
+.form-section {
+    background: #fffdfd;
+    width: 100%;
+    max-width: 1000px;
+    padding: 35px;
+    border-radius: 22px;
+    border: 2px solid #eee8ff;
+    box-shadow: 0 8px 25px rgba(150, 130, 190, 0.15);
+}
+
+/* JUDUL */
+.section-title {
+    font-size: 26px;
+    color: #8b78c5;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #a49bb9;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* FORM DUA KOLOM */
+.custom-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+}
+
+/* FORM GROUP */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #776b99;
+    margin-bottom: 7px;
+}
+
+.group-label {
+    margin-bottom: 8px !important;
+}
+
+/* INPUT, SELECT, TEXTAREA */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #625b78;
+    border: 1.5px solid #ded5f5;
+    border-radius: 11px;
+    background: #faf8ff;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b8a9e8;
+    box-shadow: 0 0 8px rgba(184, 169, 232, 0.3);
+    background: white;
+}
+
+/* RADIO BUTTON DAN CHECKBOX */
+.radio-group,
+.checkbox-group {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.inline-label {
+    font-weight: normal !important;
+    color: #756c8c;
+    display: flex !important;
+    align-items: center;
+    gap: 6px;
+}
+
+/* HOBI */
+.checkbox-group input {
+    accent-color: #a99bdc;
+}
+
+/* TOMBOL */
+.button-group {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+/* UKURAN TOMBOL BESAR */
+.btn {
+    min-width: 180px;
+    padding: 16px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(120, 100, 160, 0.12);
+}
+
+/* TOMBOL KIRIM */
+.btn-submit {
+    background: #a99bdc;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #9180ca;
+    transform: translateY(-3px);
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+}
+
+/* TOMBOL BATAL */
+.btn-reset {
+    background: #c5e8e2;
+    color: #527f78;
+}
+
+.btn-reset:hover {
+    background: #a9d9d0;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.main-footer {
+    background: #b8a9e8;
+    color: white;
+    text-align: center;
+    padding: 17px;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 600px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .custom-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .radio-group,
+    .checkbox-group {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .btn {
+        min-width: 0;
+        flex: 1;
+        padding: 14px 12px;
+        font-size: 16px;
+    }
+}
+/* MEMPERBESAR TOMBOL KIRIM DAN BATAL */
+.button-group {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Semua tombol di dalam button-group */
+.button-group button {
+    width: 190px !important;
+    height: 58px !important;
+    padding: 12px 25px !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    border: none !important;
+    border-radius: 15px !important;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(150, 130, 190, 0.2);
+    transition: 0.3s;
+}
+
+/* KIRIM */
+.button-group button[type="submit"] {
+    background-color: #a99bdc !important;
+    color: white !important;
+}
+
+.button-group button[type="submit"]:hover {
+    background-color: #9180ca !important;
+    transform: translateY(-3px);
+}
+
+/* BATAL */
+.button-group button[type="reset"] {
+    background-color: #c5e8e2 !important;
+    color: #527f78 !important;
+}
+
+.button-group button[type="reset"]:hover {
+    background-color: #a9d9d0 !important;
+    transform: translateY(-3px);
+}
+/* PERINGATAN PASSWORD */
+#passwordWarning {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+/* CHECKBOX TAMPILKAN PASSWORD */
+.show-password {
+    display: flex !important;
+    align-items: center;
+    gap: 7px;
+    margin-top: 8px;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+.show-password input {
+    width: auto !important;
+    accent-color: #a99bdc;
+}
